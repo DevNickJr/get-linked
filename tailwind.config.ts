@@ -8,6 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Montserrat", "sans-serif"],
+        clash: ['var(--font-clash)', 'sans-serif'], 
+        monte: ['montes', 'sans-serif'], 
+      },
+      colors: {
+        primary: "#D434FE",
+        secondary: "#150E28",
+        tertiary: "#FF26B9",
+        // secondary: "#100B20"
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,6 +26,6 @@ const config: Config = {
       },
     },
   },
-  plugins: ["prettier-plugin-tailwindcss"],
+  plugins: [],
 }
 export default config

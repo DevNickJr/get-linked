@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer utilities {
+    .grad-to-r {
+        background: rgb(144,58,255);
+        background: -moz-linear-gradient(90deg, rgba(144,58,255,1) 0%, rgba(212,52,254,1) 60%, rgba(254,52,185,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(144,58,255,1) 0%, rgba(212,52,254,1) 60%, rgba(254,52,185,1) 100%);
+        background: linear-gradient(90deg, rgba(144,58,255,1) 0%, rgba(212,52,254,1) 60%, rgba(254,52,185,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#903aff",endColorstr="#fe34b9",GradientType=1);
+    }
+}

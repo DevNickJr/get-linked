@@ -1,8 +1,29 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ['latin'] })
+// Font files can be colocated inside of `app`
+const clashFont = localFont({
+  // src: './WEB/fonts/ClashDisplay-Bold.woff2',
+  src: [
+    {
+      path: './WEB/fonts/ClashDisplay-Bold.woff2',
+      weight: '700',
+      style: 'bold',
+    },
+    {
+      path: './WEB/fonts/ClashDisplay-Medium.woff2',
+      weight: '500',
+      style: 'medium',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-clash'
+})
+ 
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +37,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${clashFont.variable} ${montserrat.className} font-sans`}>{children}</body>
     </html>
   )
 }
+
+{/* <body className={clashFont.className}>{children}</body> */}
